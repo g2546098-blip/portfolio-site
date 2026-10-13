@@ -1,13 +1,16 @@
-* {
-    box-sizing: border-box;
+* { box-sizing: border-box; }
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 50px;
 }
-body{
-    background: #ecaed4;
+body {
+    background: #ffffff;
     color: #000000;
 }
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 header {
     display: flex;
@@ -16,7 +19,7 @@ header {
     width: 100%;
     position: fixed;
     padding: 0px 30px;
-    background: #f35b5b;
+    background: #ffffff;
     height: 75px;
     top: 0;
 }
@@ -31,12 +34,15 @@ footer {
     padding: 20px 30px;
     font-size: 11px;
 }
+/*
 nav a:hover {
-    color: #eab1b1;
+    color: #9c9393;
 }
+*/
 #top {
     padding-top: 75px;
 }
+
 #works-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
