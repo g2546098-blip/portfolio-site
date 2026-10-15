@@ -8,7 +8,7 @@ fetch("works.csv")
         var rows = data.trim().split("\n");
 
         //1行目は見出し
-        var headers = rows[0].split(",");
+        var headers = rows[0].split(",").map(function(h) {return h.trim(); });
 
         //2行目以降を作品データにする
         var works = rows.slice(1).map(function(row) {
@@ -98,7 +98,7 @@ else if (sortType === "old") {
 }
 else if (sortType === "title") {
     filteredWorks.sort(function(a, b) {
-        return a.title.localeCompare(b.title, "Ja");
+        return a.title.localeCompare(b.title, "ja");
     });
 }
 
@@ -111,8 +111,6 @@ filteredWorks.forEach(function(work) {
     var card = document.createElement("article");
 
     card.className = "work-card";
-
-    card.innerName = "work-card";
 
     card.innerHTML =
         '<a href="' + work.link + '">' +
